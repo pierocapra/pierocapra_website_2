@@ -347,8 +347,12 @@ section.section-show {
 
 section .container {
   background: rgba(0, 0, 0, 0.9);
+
   padding: 30px;
 }
+/* section .container:first-child {
+  background-image: linear-gradient(to bottom right, rgb(50, 0, 63), black);
+} */
 
 @media (max-width: 768px) {
   section {
