@@ -11,6 +11,7 @@
 html {
   cursor: default;
 }
+
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #040404;
@@ -22,9 +23,16 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/bg3.JPG") top right no-repeat;
+  /* background: #040404 url("../img/bg3.JPG") top left no-repeat; */
+  background: linear-gradient(
+      150deg,
+      rgba(0, 162, 255, 0.3) 10%,
+      #04040400 30%,
+      #04040400 100%
+    ),
+    url("../img/bg3.JPG") left no-repeat;
   background-size: cover;
-  background-position: left;
+  /* background-position: left; */
   /* background-image: linear-gradient(to bottom right, black, rgb(50, 0, 63)); */
 
   left: 0;
@@ -513,6 +521,31 @@ section .container {
   transition: 0.9s;
   background-color: rgb(0, 162, 255);
 }
+
+/* .progress-bar1 {
+  background-color: #ffbb2c;
+}
+.progress-bar2 {
+  background-color: #e361ff;
+}
+.progress-bar3 {
+  background-color: #e80368;
+}
+.progress-bar4 {
+  background-color: #11dbcf;
+}
+.progress-bar5 {
+  background-color: #47aeff;
+}
+.progress-bar6 {
+  background-color: #ff5828;
+}
+.progress-bar7 {
+  background-color: #33ff55;
+}
+.progress-bar8 {
+  background-color: #cc2929;
+} */
 
 /*--------------------------------------------------------------
 # Interests
