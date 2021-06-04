@@ -24,13 +24,20 @@ body::before {
   content: "";
   position: fixed;
   /* background: #040404 url("../img/bg3.JPG") top left no-repeat; */
-  background: linear-gradient(
+  /* background: linear-gradient(
       150deg,
       rgba(0, 162, 255, 0.3) 10%,
       #04040400 30%,
       #04040400 100%
     ),
-    url("../img/bg3.JPG") left no-repeat;
+    url("../img/bg3.JPG") left no-repeat; */
+  background: linear-gradient(
+      30deg,
+      rgba(0, 162, 255, 0.3) 5%,
+      #04040400 25%,
+      #04040400 100%
+    ),
+    url("../img/bg7.JPG") top left no-repeat;
   background-size: cover;
   /* background-position: left; */
   /* background-image: linear-gradient(to bottom right, black, rgb(50, 0, 63)); */
@@ -155,7 +162,15 @@ h6 {
   #header .container {
     display: flex;
     flex-direction: column;
+    align-items: left;
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  #header .container {
     align-items: center;
+    padding-left: var(--bs-gutter-x, 0.75rem);
   }
 }
 
@@ -1037,12 +1052,19 @@ section .container {
   width: 100%;
 }
 
-.portfolio-details .portfolio-info .open-website {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  font-size: 28px;
+.portfolio-details .portfolio-info .open-par {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  float: right;
 }
+.portfolio-details .portfolio-info .open-website {
+  /* position: absolute;
+  right: 0;
+  bottom: 0; */
+  font-size: 28px;
+  vertical-align: middle;
+}
+
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
@@ -1245,4 +1267,8 @@ section .container {
 
 .credits a:hover {
   color: #fff;
+}
+
+.gslide-media {
+  background-color: #040404;
 }
