@@ -459,6 +459,9 @@ section .container {
   margin-bottom: 0;
 }
 
+.about-me .content p {
+  line-height: 1.6;
+}
 /*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
@@ -651,21 +654,24 @@ section .container {
   position: relative;
   z-index: 1;
 }
-
 .testimonials .swiper-pagination {
   margin-top: 20px;
   position: relative;
 }
-
 .testimonials .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  opacity: 1;
+  opacity: 0;
   background-color: rgba(255, 255, 255, 0.3);
 }
-
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: rgb(0, 162, 255);
+}
+
+@media (max-width: 1200px) {
+  .testimonials .swiper-pagination .swiper-pagination-bullet {
+    opacity: 1;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -759,7 +765,7 @@ section .container {
 }
 
 .qualification-icon {
-  width: 64px;
+  width: 74px;
   margin-bottom: 20px;
   border-radius: 5px;
 }
@@ -795,7 +801,7 @@ section .container {
 }
 
 .services .icon-box:hover {
-  background: rgb(0, 162, 255);
+  background: rgba(0, 162, 255, 0.7);
   border-color: rgb(0, 162, 255);
 }
 
