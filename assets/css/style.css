@@ -37,7 +37,7 @@ body::before {
       #04040400 25%,
       #04040400 100%
     ),
-    url("../img/bg7.JPG") top left no-repeat;
+    url("../img/bg7-min-comp.JPG") top left no-repeat;
   background-size: cover;
   /* background-position: left; */
   /* background-image: linear-gradient(to bottom right, black, rgb(50, 0, 63)); */
