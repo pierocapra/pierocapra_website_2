@@ -36,8 +36,6 @@
   $contact->add_message( $_POST['name'], 'From');
   $contact->add_message( $_POST['email'], 'Email');
   $contact->add_message( $_POST['message'], 'Message', 10);
-  // PIERO ADD BCC
-  $contact->addBCC($_POST['email']);
 
   echo $contact->send();
 ?>
