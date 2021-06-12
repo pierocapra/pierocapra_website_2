@@ -735,6 +735,34 @@ section .container {
   border: 2px solid rgb(0, 162, 255);
 }
 
+.download-CV-box {
+  width: 100%;
+  display: grid;
+  margin: 30px 0;
+}
+
+.download-CV-content {
+  background: rgba(134, 134, 134, 0.15);
+  width: 230px;
+  padding: 20px;
+  text-align: center;
+  justify-self: center;
+  font-size: 14px;
+  transition: all 0.3s ease-out 0s;
+}
+
+.download-icon {
+  font-size: 24px;
+}
+
+.download-CV-content:hover {
+  background: rgba(0, 162, 255, 0.7);
+  border-color: rgb(0, 162, 255);
+}
+
+/* .download-CV-box:hover a {
+  color: #fff;
+} */
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
@@ -1279,6 +1307,9 @@ section .container {
   background-color: #040404;
 }
 
+/*  */
+/*  */
+
 /* PRELOADER */
 #preloader {
   position: fixed;
@@ -1315,11 +1346,11 @@ section .container {
 }
 @keyframes animate-preloader {
   0% {
+    -webkit-transform: rotate(360deg);
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
