@@ -254,72 +254,14 @@
   });
 })();
 
-// //////////////////////////////THREE/////////////////
-// const scene = new THREE.Scene();
-
-// const camera = new THREE.PerspectiveCamera(
-//   75,
-//   window.innerWidth / window.innerHeight,
-//   0.1,
-//   1e3
-// );
-
-// const canvas = document.querySelector(".webgl");
-// const cubeArea = document.getElementById("cubeArea");
-// const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: !0 });
-// (canvas.width = canvas.clientWidth),
-//   (canvas.height = canvas.clientHeight),
-//   renderer.setViewport(0, 0, canvas.clientWidth, canvas.clientHeight),
-//   (camera.aspect = canvas.clientWidth / canvas.clientHeight),
-//   camera.updateProjectionMatrix(),
-//   cubeArea.appendChild(renderer.domElement);
-
-// const geometry = new THREE.BoxGeometry(1.45, 1.45, 1.45),
-//   textureAll = [],
-//   texture1 = new THREE.TextureLoader().load("assets/img/cube/css.png"),
-//   texture2 = new THREE.TextureLoader().load("assets/img/cube/js.png"),
-//   texture3 = new THREE.TextureLoader().load("assets/img/cube/html.png"),
-//   texture4 = new THREE.TextureLoader().load("assets/img/cube/python.png"),
-//   texture5 = new THREE.TextureLoader().load("assets/img/cube/java.png"),
-//   texture6 = new THREE.TextureLoader().load("assets/img/cube/php.png");
-// textureAll.push(
-//   new THREE.MeshBasicMaterial({ color: 16777215, map: texture1 })
-// ),
-//   textureAll.push(new THREE.MeshBasicMaterial({ map: texture2 })),
-//   textureAll.push(new THREE.MeshBasicMaterial({ map: texture3 })),
-//   textureAll.push(new THREE.MeshBasicMaterial({ map: texture4 })),
-//   textureAll.push(new THREE.MeshBasicMaterial({ map: texture5 })),
-//   textureAll.push(new THREE.MeshBasicMaterial({ map: texture6 }));
-
-// const cube = new THREE.Mesh(geometry, textureAll);
-
-// scene.add(cube),
-//   (camera.position.z = 2),
-//   document.addEventListener("mousemove", onDocumentMouseMove);
-
-// let mouseX = 0,
-//   mouseY = 0,
-//   targetX = 0,
-//   targetY = 0;
-
-// const windowHalfx = window.innerWidth / 2;
-// const windowHalfy = window.innerHeight / 2;
-
-// function onDocumentMouseMove(e) {
-//   (mouseX = e.clientX - windowHalfx), (mouseY = e.clientX - windowHalfy);
-// }
-
-// const clock = new THREE.Clock();
-// function animate() {
-//   (targetX = 0.01 * mouseX),
-//     (targetY = 0.01 * mouseY),
-//     requestAnimationFrame(animate),
-//     renderer.render(scene, camera);
-
-//   const e = clock.getElapsedTime();
-//   (cube.rotation.x += 0.05 * e),
-//     (cube.rotation.y += 0.04 * e),
-//     (cube.rotation.y += 0.05 * (targetX - cube.rotation.y)),
-//     (cube.rotation.x += 0.05 * (targetY - cube.rotation.x));
-// }
-// animate();
+//////PRELOADER////////
+$(document).ready(function () {
+  $(window).on("load", function () {
+    $("#preloader").length &&
+      $("#preloader")
+        .delay(100)
+        .fadeOut("slow", function () {
+          $(this).remove();
+        });
+  });
+});
